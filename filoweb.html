@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Kapit-Serbisyong Bayan Biñan</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#ffe6f0;
+    scroll-behavior: smooth;
+}
+
+nav{
+    background:#b3127d;
+    padding:12px;
+    text-align:center;
+    position: sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
+nav button{
+    background:#ff5fb7;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    margin:5px;
+    border-radius:20px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+nav button:hover{
+    background:#ff89c9;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+section{
+    padding:60px 20px;
+    min-height:100vh;
+}
+.navbar{
+    background-color:pink;
+    padding:15px;
+    text-align:center;
+}
+.navbar a{
+    color:black;
+    text-decoration:none;
+    padding: 10px 18px;
+    margin:0 8px;
+    font-weight:bold;
+    border-radius:25px;
+    transition: all 0.3s ease;
+}
+.navbar a:hover{
+    background-color:rgb(255, 95, 183);
+    color:white;
+}
+.navbar a.active{
+    background-color:rgb(255, 95, 183);
+    color:white;
+}
+
+#home {
+    background: pink;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+.hero-title {
+    font-size: 80px;
+    font-weight: 700;
+    color: #b3127d;
+    transition: all 0.5s ease;
+}
+
+.hero-tagline {
+    font-size: 32px;
+    color: #444;
+    margin-top: 16px;
+    transition: all 0.5s ease;
+}
+
+.shrink .hero-title {
+    font-size: 48px;
+}
+
+.shrink .hero-tagline {
+    font-size: 22px;
+}
+
+.hero-extra {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.5s ease;
+    pointer-events: none;
+}
+
+.hero-extra.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.points-box{
+    background: #fff;
+    padding: 40px 45px;        
+    border-left: 8px solid #E0218A;
+    border-radius: 12px;
+    max-width: 650px;
+    margin: 35px auto 0;
+    text-align: left;
+    font-size: 20px;             
+}
+
+.points-box h2{
+    font-size: 36px;           
+    margin-bottom: 15px;
+    color: #b3127d;
+    font-weight: 700;
+}
+
+.points-box ul{
+    padding-left: 25px;
+    font-size: 22px;           
+}
+
+.points-box li{
+    margin-bottom: 14px;
+}
+
+.points-box p{
+    font-size: 20px;           
+    text-align: center;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 20px;
+    background:#E0218A;
+    color:white;
+    padding:12px 22px;
+    border-radius:25px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+#about{
+    background:rgb(228, 187, 202);
+}
+
+#services{
+    background: pink;
+}
+
+#contact{
+    background:rgb(238, 233, 234);
+}
+
+
+.btn{
+    background:#ff5fb7;
+    color:white;
+    padding:12px 20px;
+    border-radius:20px;
+    display:inline-block;
+    margin-top:20px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+    body{
+        font-family: Arial, sans-serif;
+        background-color:pink;
+        margin:10;
+    }
+    header{
+        background-color:rgb(209, 139, 169);
+        color:white;
+        padding:20px;
+        text-align:center;
+        animation: slideDown 1.5s;
+    }
+    @keyframes slideDown {
+        from { opacity: 0; transform: translateY(-40px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    section{
+        padding:20px;
+    }
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px; 
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    align-items: stretch; 
+}
+
+.card {
+    background: white;          
+    border: 2px solid #E0218A;  
+    border-radius: 12px;         
+    padding: 15px;              
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.card-content p {
+    margin: 6px 0; 
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.card-content button {
+    margin-top: 10px;
+    background: #E0218A;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.card-content button:hover {
+    background: #b3127d;
+}
+
+@media (max-width: 768px) {
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+    }
+    button{
+        background-color:rgb(168, 12, 103);
+        color:white;
+        border:none;
+        padding:8px;
+        width:100%;
+        cursor:pointer;
+        border-radius: 5px;
+    }
+    button:hover{
+        background-color:rgb(100, 3, 68);
+
+    }
+    input,select{
+        width:100%;
+        padding:6px;
+        margin-bottom: 10px;
+
+    }
+    footer{
+        background-color:rgb(244, 237, 240);
+        text-align:center;
+        padding:10px;
+    }
+
+   #about{
+    background: pink;  
+    padding: 80px 20px;
+}
+
+.about-container{
+    max-width: 1100px;
+    margin: auto;
+}
+
+.about-container h2{
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #000;
+}
+
+.about-text{
+    background: #ffffff;
+    padding: 40px 45px;
+    border-radius: 10px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+.about-text{
+    border-left: 6px solid #E0218A;
+}
+
+.about-text p{
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 18px;
+    text-align: justify;
+}
+#service-form {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border-left: 6px solid #E0218A;
+}
+
+#service-form h2 {
+    text-align: center;
+    color: #b3127d;
+    margin-bottom: 25px;
+}
+
+#service-form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+#service-form input, 
+#service-form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#service-form button {
+    background: #E0218A;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+}
+
+#service-form button:hover {
+    background: #b3127d;
+}
+
+#service-form p#message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+}
+</style>
+</head>
+
+<body>
+
+
+<nav class="navbar">
+    <a href="#home" >Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+
+
+
+<section id="home">
+    <div class="hero-content" id="hero">
+        <div class="hero-title">Kapit-Serbisyong Bayan Biñan</div>
+        <div class="hero-tagline">Tulong sa Kapwa, Abot sa Barangay</div>
+
+       
+        <div class="hero-extra" id="heroExtra">
+            <div class="points-box">
+                <h2>Systema ng Community Points</h2>
+                <ul>
+                    <li>Mag-request ng serbisyo – <b>10 puntos</b></li>
+                    <li>Mag-refer ng kaibigan – <b>15 puntos</b></li>
+                    <li>Ipalit ang puntos – <b>1 puntos = ₱20 discount</b></li>
+                </ul>
+                <p style="text-align:center; margin-top:10px;">
+                    Simulan ang pag-ipon ng puntos at mas tangkilikin ang serbisyo ng komunidad!
+                </p>
+            </div>
+
+            <a href="#services" class="btn">View Services</a>
+        </div>
+    </div>
+</section>
+
+
+<section id="about">
+    <div class="about-container">
+    <h2>About Us</h2>
+    <p>
+        <div class="about-text">
+        
+        Ang Kapit-Serbisyong Bayan Biñan ay isang inisyatiba ng lokal na pamahalaan na layuning magbigay ng madaling ma-access at abot-kayang serbisyo sa mga residente ng Biñan. Sa pamamagitan ng programang ito, ang bawat miyembro ng komunidad ay maaaring makakuha ng tulong para sa kanilang pang-araw-araw na pangangailangan at mga espesyal na serbisyo. Layunin nitong mapabuti ang kalidad ng buhay at mas mapalapit ang pamahalaan sa mga mamamayan.
+<br><br>
+Kabilang sa mga pangunahing serbisyo ang House Cleaning Service at Gardening Service, na tumutulong sa pagpapanatili ng malinis at maayos na tahanan at bakuran. Ang mga serbisyong ito ay idinisenyo para sa mga abalang pamilya o indibidwal na nangangailangan ng dagdag na tulong sa bahay. Sa ganitong paraan, mas nagiging magaan ang pang-araw-araw na gawain at mas maraming oras ang pamilya para sa isa’t isa.
+<br><br>
+Para naman sa edukasyon at personal na pag-unlad, nagbibigay ang Kapit-Serbisyong Bayan ng mga serbisyo tulad ng Home Tutoring, Music Lessons, Art Classes, Dance Classes, Language Lessons, at Computer o Tech Lessons. Ang mga serbisyong ito ay nakatutok sa pagpapalawak ng kaalaman at kasanayan ng bawat residente, mula sa bata hanggang sa matatanda, at tumutulong sa holistic na pag-unlad ng bawat isa sa komunidad.
+<br><br>
+Mayroon ding Home Repair Service at Cooking or Baked Services, pati na rin ang Fitness Exercise Coaching at Pet Care Service. Ang mga ito ay naglalayong matugunan ang pangangailangan sa bahay, kalusugan, at lifestyle ng bawat pamilya. Sa pamamagitan ng mga serbisyong ito, mas nagiging kumpleto ang suporta ng komunidad sa pang-araw-araw na buhay ng bawat residente, mula sa simpleng gawain hanggang sa personal na pag-unlad.
+<br><br>
+Para sa mga taong may espesyal na pangangailangan, nagbibigay ang Kapit-Serbisyong Bayan ng PWD Assistance at Child Care or Baby Care Service. Ang PWD Assistance ay naglalaman ng tulong sa kalusugan, livelihood, at assistive devices, habang ang Child Care ay tumutulong sa mga magulang na maaalagaan ang kanilang mga anak sa ligtas at maayos na paraan. Sa ganitong paraan, sinisiguro ng programa na walang maiiwan at lahat ay may pantay na oportunidad sa komunidad.
+<br><br>
+Sa kabuuan, ang Kapit-Serbisyong Bayan Biñan ay isang komprehensibong programa na naglalayong maghatid ng suporta, edukasyon, kalusugan, at personal na pag-unlad sa bawat residente. Sa pamamagitan ng mga serbisyong tulad ng house cleaning, gardening, tutoring, home repair, art, music, language, fitness, pet care, PWD assistance, at child care, mas nagiging matatag at masigla ang komunidad. Ito rin ay nagpapalakas ng ugnayan ng bawat residente at ng pamahalaan, habang itinataguyod ang pantay na oportunidad at inclusive na komunidad para sa lahat.
+
+    </p>
+    </div>
+</div>
+</section>
+
+
+<section id="services">
+    <h2 style="text-align:center;">Mga Serbisyong Inaalok</h2>
+    <div class="services-container">
+        <div class="card" data-service="House Cleaning">
+            <img src="house cleaning.jpg" alt="House Cleaning">
+            <div class="card-content">
+                <p><b>House Cleaning</b></p>
+                <p>Serbisyong paglilinis ng bahay para sa mas malinis at maayos na tahanan.</p>
+                <p>Provider: Anne Baylon</p>
+                <p>Magsisimula ang presyo sa 500 pesos / 50 Puntos</p>
+                <button data-service="House Cleaning">Request Service</button>
+            </div>
+        </div>
+
+        <div class="card" data-service="Gardening">
+            <img src="gardening.jpg" alt="Gardening">
+            <div class="card-content">
+                <p><b>Gardening</b></p>
+                <p>Serbisyong pag-aalaga at pag-aayos ng mga halaman sa inyong bakuran.</p>
+                <p>Provider: Ikeana Bartulay</p>
+                <p>Magsisimula ang presyo sa 300 Pesos / 25 Puntos</p>
+                <button data-service="Gardening">Request Service</button>
+            </div>
+        </div>
+
+        <div class="card" data-service="Home Tutoring">
+            <img src="home tutoring.jpg" alt="Home Tutoring">
+            <div class="card-content">
+                <p><b>Home Tutoring</b></p>
+                <p>Serbisyong pag-aaral at pagtuturo sa bahay para sa mas maayos na pagkatuto.</p>
+                <p>Provider: Shickiea Dizon</p>
+                <p>Magsisimula ang presyo sa 400 Pesos / 35 Puntos</p>
+                <button data-service="Home Tutoring">Request Service</button>
+            </div>
+        </div>
+
+        <div class="card" data-service="Home Repairs">
+            <img src="home repair.jpg" alt="Home Repairs">
+            <div class="card-content">
+                <p><b>Home Repairs</b></p>
+                <p>Serbisyong pag-aayos ng mga bahay at kagamitan sa inyong tahanan.</p>
+                <p>Provider: Laurence Lastra</p>
+                <p>Magsisimula ang presyo sa 380 Pesos / 36 Puntos</p>
+                <button data-service="Home Repairs">Request Service</button>
+            </div>
+        </div>
+
+        <div class="card" data-service="Pet Care">
+            <img src="pet care.jpg" alt="Pet Care">
+            <div class="card-content">
+                <p><b>Pet Care</b></p>
+                <p>Serbisyong pag-aalaga ng mga hayop sa inyong tahanan.</p>
+                <p>Provider: Shanise Relacion</p>
+                <p>Magsisimula ang presyo sa 390 Pesos / 39 Puntos</p>
+                <button data-service="Pet Care">Request Service</button>
+            </div>
+        </div>
+
+        <div class="card" data-service="Music Lessons">
+            <img src="music lessons.jpg" alt="Music Lessons">
+            <div class="card-content">
+                <p><b>Music Lessons</b></p>
+                <p>Serbisyong pag-aaral at pagtuturo ng musika sa bahay.</p>
+                <p>Provider: Marisse Baylon</p>
+                <p>Magsisimula ang presyo sa 300 Pesos / 25 Puntos</p>
+                <button data-service="Music Lessons">Request Service</button>
+            </div>
+        </div>
+
+        <div class="card" data-service="Art Classes">
+            <img src="art class.jpg" alt="Art Classes">
+            <div class="card-content">
+                <p><b>Art Classes</b></p>
+                <p>Serbisyong pag-aaral at pagtuturo ng sining sa bahay.</p>
+                <p>Provider: Shaun Bartulay</p>
+                <p>Magsisimula ang presyo sa 360 Pesos / 35 Puntos</p>
+                <button data-service="Art Classes">Request Service</button>
+            </div>
+        </div>
+
+        <div class="card" data-service="Dance Classes">
+            <img src="dance class.jpg" alt="Dance Classes">
+            <div class="card-content">
+                <p><b>Dance Classes</b></p>
+                <p>Serbisyong pag-aaral at pagtuturo ng sayaw sa bahay.</p>
+                <p>Provider: Angel Shickiea Dizon</p>
+                <p>Magsisimula ang presyo sa 350 Pesos / 30 Puntos</p>
+                <button data-service="Dance Classes">Request Service</button>
+            </div>
+        </div>
+
+        <div class="card" data-service="Language Lessons">
+            <img src="language lessons.jpg" alt="Language Lessons">
+            <div class="card-content">
+                <p><b>Language Lessons</b></p>
+                <p>Serbisyong pag-aaral at pagtuturo ng wika sa bahay.</p>
+                <p>Provider: Collen Relacion</p>
+                <p>Magsisimula ang presyo sa 300 Pesos / 25 Puntos</p>
+                <button data-service="Language Lessons">Request Service</button>
+            </div>
+        </div>
+
+        <div class="card" data-service="Computer / Tech Lessons">
+            <img src="tech lessons.jpg" alt="Computer / Tech Lessons">
+            <div class="card-content">
+                <p><b>Computer / Tech Lessons</b></p>
+                <p>Serbisyong pag-aaral at pagtuturo ng computer at teknolohiya sa bahay.</p>
+                <p>Provider: Angel Dizon</p>
+                <p>Magsisimula ang presyo sa 500 Pesos / 45 Puntos</p>
+                <button data-service="Computer / Tech Lessons">Request Service</button>
+            </div>
+        </div>
+
+        <div class="card" data-service="Cooking / Baking Services">
+            <img src="baking class.jpg" alt="Cooking / Baking Services">
+            <div class="card-content">
+                <p><b>Cooking / Baking Services</b></p>
+                <p>Serbisyong pag-aaral at pagtuturo ng kusina at pagpapabakal sa bahay.</p>
+                <p>Provider: Ikeana Bartulay</p>
+                <p>Magsisimula ang presyo sa 450 Pesos / 40 Puntos</p>
+                <button data-service="Cooking / Baking Services">Request Service</button>
+            </div>
+        </div>
+
+        <div class="card" data-service="Fitness / Exercise Coaching">
+            <img src="fitness lessons.jpg" alt="Fitness / Exercise Coaching">
+            <div class="card-content">
+                <p><b>Fitness / Exercise Coaching</b></p>
+                <p>Serbisyong pag-aaral at pagtuturo ng fitness at pagsasanay sa bahay.</p>
+                <p>Provider: Shickiea Dizon</p>
+                <p>Magsisimula ang presyo sa 350 Pesos / 30 Puntos</p>
+                <button data-service="Fitness / Exercise Coaching">Request Service</button>
+            </div>
+        </div>
+
+        <div class="card" data-service="PWD Assistance">
+            <img src="pwd asistance.jpg" alt="PWD Assistance">
+            <div class="card-content">
+                <p><b>PWD Assistance</b></p>
+                <p>Serbisyong tulong sa PWD sa pang-araw-araw at pantay na oportunidad sa lipunan.</p>
+                <p>Provider: Anne Marisse Baylon</p>
+                <p>Magsisimula ang presyo sa 400 Pesos / 35 Puntos</p>
+                <button data-service="PWD Assistance">Request Service</button>
+            </div>
+        </div>
+
+        <div class="card" data-service="Child Care / Babysitting">
+            <img src="babysitting.jpg" alt="Child Care / Babysitting">
+            <div class="card-content">
+                <p><b>Child Care / Babysitting</b></p>
+                <p>Serbisyong pag-aalaga at pagbantay ng bata.</p>
+                <p>Provider: Laurence Lastra</p>
+                <p>Magsisimula ang presyo sa 400 Pesos / 35 Puntos</p>
+                <button data-service="Child Care / Babysitting">Request Service</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+</div>
+    </section>
+    <section id="service-form">
+    <h2> Service Request Form</h2>
+    <form id="requestForm" onsubmit="submitRequest(event)">
+        <label for="name">Pangalan:</label>
+        <input type="text" id="name" required>
+
+        <label for="Barangay">Address (Barangay Biñan Only):</label>
+        <input type="text" id="Barangay" required>
+
+        <label for="service">Napiling Serbisyo:</label>
+        <input type="text" id="service" readonly required> 
+
+        <label for="preferredDateTime">Gustong Petsa at Oras:</label>
+        <input type="datetime-local" id="preferredDateTime" required>
+
+        <label for="contactNumber">Contact Number:</label>
+        <input type="tel" id="contactNumber" required>
+
+        <label for="paymentMethod">Paraan ng Pagbabayad:</label>
+        <select id="paymentMethod" required>
+            <option value="">Select Payment Method</option>
+            <option value="Cash">Cash</option>
+            <option value="GCash">GCash</option>
+        </select>
+
+        <button type="submit">Submit Request</button>
+    </form>
+    <p id="message"></p>
+</section>
+    
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <section>
+    <h2>📋 Listahan ng Mga Service Providers</h2>
+
+    <table border="1" width="100%" cellpadding="10" cellspacing="0">
+        <tr style="background-color:#d18ba9; color:white;">
+            <th>Pangalan</th>
+            <th>Serbisyo</th>
+            <th>Lokasyon (Barangay)</th>
+            <th>Contact Number</th>
+        </tr>
+
+        <tr>
+            <td>Anne Baylon</td>
+            <td>House Cleaning</td>
+            <td>Barangay San Vicente, Biñan</td>
+            <td>0912-345-6789</td>
+        </tr>
+
+        <tr>
+            <td>Ikeana Bartulay</td>
+            <td>Gardening / Cooking & Baking</td>
+            <td>Barangay Zapote, Biñan</td>
+            <td>0923-456-7890</td>
+        </tr>
+
+        <tr>
+            <td>Shickiea Dizon</td>
+            <td>Home Tutoring / Fitness Coaching</td>
+            <td>Barangay Platero, Biñan</td>
+            <td>0934-567-8901</td>
+        </tr>
+
+        <tr>
+            <td>Laurence Lastra</td>
+            <td>Home Repairs / Babysitting</td>
+            <td>Barangay Tubigan, Biñan</td>
+            <td>0945-678-9012</td>
+        </tr>
+
+        <tr>
+            <td>Shanise Relacion</td>
+            <td>Pet Care</td>
+            <td>Barangay Sto. Niño, Biñan</td>
+            <td>0956-789-0123</td>
+        </tr>
+
+        <tr>
+            <td>Marisse Baylon</td>
+            <td>Music Lessons</td>
+            <td>Barangay Canlalay, Biñan</td>
+            <td>0967-890-1234</td>
+        </tr>
+
+        <tr>
+            <td>Shaun Bartulay</td>
+            <td>Art Classes</td>
+            <td>Barangay Bungahan, Biñan</td>
+            <td>0978-901-2345</td>
+        </tr>
+
+        <tr>
+            <td>Collen Relacion</td>
+            <td>Language Lessons</td>
+            <td>Barangay Ganado, Biñan</td>
+            <td>0989-012-3456</td>
+        </tr>
+
+        <tr>
+            <td>Angel Dizon</td>
+            <td>Computer / Tech Lessons</td>
+            <td>Barangay San Antonio, Biñan</td>
+            <td>0991-234-5678</td>
+        </tr>
+
+    </table>
+</section>
+
+</section>
+<footer>
+    <p>© 2026 Kapit-Serbisyong Bayan Binan|Para sa Komunidad ng Pilipino</p>
+</footer>
+<script>function SelectService(Service) {
+    document.getElementById("service").value = Service;
+
+
+    document.getElementById("service").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+function submitRequest(event) {
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let service = document.getElementById("service").value;
+
+    if (service === " ") {
+        alert("Pumili muna ng Serbisyo.");
+        return;
+    }
+
+    document.getElementById("message").innerHTML = `Salamat, ${name}! Ang iyong request para sa ${service} ay natanggap.`;
+}function submitRequest(event) {
+    event.preventDefault(); 
+
+    const name = document.getElementById('name').value;
+    const service = document.getElementById('service').value;
+
+    if (!service) {
+        alert("Pumili muna ng Serbisyo.");
+        return;
+    }
+
+    const message = document.getElementById('message');
+    message.innerHTML = `Salamat, <b>${name}</b>! Ang iyong request para sa <b>${service}</b> ay natanggap.`;
+    message.style.color = "#b3127d";
+    message.style.fontWeight = "bold";
+
+    
+    document.getElementById('requestForm').reset();
+    document.getElementById('service').value = service; 
+}
+window.addEventListener("scroll", function () {
+    const hero = document.getElementById("hero");
+    const extra = document.getElementById("heroExtra");
+
+    if (window.scrollY > 80) { 
+        hero.classList.add("shrink");
+        extra.classList.add("show");
+    } else {
+        hero.classList.remove("shrink");
+        extra.classList.remove("show");
+    }
+});
+document.querySelectorAll('.btn[href^="#"]').forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.preventDefault(); 
+
+        const targetID = this.getAttribute('href');
+        const targetSection = document.querySelector(targetID);
+
+        if (targetSection) {
+            const navbarHeight = document.querySelector('nav.navbar').offsetHeight;
+
+          
+            const targetPosition = targetSection.offsetTop - navbarHeight;
+
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+const navbarHeight = document.querySelector('nav.navbar').offsetHeight;
+
+
+function scrollToSection(sectionID) {
+    const target = document.querySelector(sectionID);
+    if (target) {
+        const targetPosition = target.offsetTop - navbarHeight - 10;
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
+    }
+}
+
+
+document.querySelectorAll('nav.navbar a').forEach(link => {
+    link.addEventListener('click', function(e){
+        e.preventDefault();
+        scrollToSection(this.getAttribute('href'));
+    });
+});
+
+
+const viewBtn = document.querySelector('.btn[href="#services"]');
+if(viewBtn){
+    viewBtn.addEventListener('click', function(e){
+        e.preventDefault();
+        scrollToSection(this.getAttribute('href'));
+    });
+}
+
+
+document.querySelectorAll('button[data-service]').forEach(btn => {
+    btn.addEventListener('click', function(){
+        const serviceName = this.getAttribute('data-service');
+        // Set the service input
+        const serviceInput = document.getElementById('service');
+        if(serviceInput){
+            serviceInput.value = serviceName;
+        }
+      
+        scrollToSection('#service-form');
+    });
+});
+</script>
+
+
+</body>
+</html>
